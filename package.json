@@ -1,17 +1,17 @@
 {
-  "name": "@lsegurado/ls-element-template",
+  "name": "@lsegurado/ls-element-storybook-template",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Template for ls-element library",
+  "description": "Storybook template for ls-element library",
   "scripts": {
-    "start": "ls-server --start",
+    "storybook": "web-dev-server --config node_modules/@lsegurado/storybook-config-ls-element/server.config.mjs",
+    "build-storybook": "web-dev-server --config .storybook/server.config.mjs",
     "dist": "ls-server --dist",
-    "build": "ls-server --build",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public",
     "lint": "eslint --fix src/**/*{.ts,.tsx}",
     "stylelint": "npx stylelint --fix **/*.css",
-    "sandbox": "npm install && npm run start"
+    "sandbox": "npm install && npm run storybook"
   },
   "keywords": [
     "web-components"
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@lsegurado/eslint-config-ls-element": "0.0.3",
     "@lsegurado/ls-server": "^0.0.15",
+    "@lsegurado/storybook-config-ls-element": "0.0.2",
     "@lsegurado/stylelint-config-ls-element": "^0.0.2",
     "eslint": "^7.19.0",
     "husky": "^4.3.8",
@@ -26,7 +27,7 @@
     "typescript": "^4.1.2"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "^1.2.5"
+    "@lsegurado/ls-element": "^1.2.6"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"

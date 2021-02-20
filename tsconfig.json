@@ -19,12 +19,14 @@
         "noUnusedParameters": true,
         "jsx": "react",
         "jsxFactory": "h.createElement",
+        "types": [],
         "jsxFragmentFactory": "h.Fragment"
     },
     "include": [
         "src"
     ],
     "exclude": [
+        "src/**/*.stories.tsx",
         "node_modules"
     ]
 }

@@ -31,7 +31,8 @@ export class MyCounter extends HTMLElement implements LSCustomElement {
 	}
 }
 
-type CounterAttributes = {
+export type CounterAttributes = {
+	count?: number;
 	oncountchanged?: (event: CustomEvent<number>) => void;
 } & HTMLAttributes;
 

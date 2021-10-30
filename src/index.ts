@@ -1,1 +1,1 @@
-import './components/RootComponent';
+import './components/Counter';

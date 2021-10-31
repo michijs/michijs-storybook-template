@@ -13,8 +13,7 @@
     "dist": "ls-server --dist",
     "postinstall": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",
-    "publish-npm": "npm run dist && npm publish --access public",
-    "sandbox": "npm run storybook"
+    "publish-npm": "npm run dist && npm publish --access public"
   },
   "keywords": [
     "web-components",

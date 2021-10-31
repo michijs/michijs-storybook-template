@@ -1,9 +1,14 @@
 import { LsServerConfig } from '@lsegurado/ls-server';
 
-export const config: LsServerConfig = () => ({
-    esbuildOptions: {
-        entryPoints: ['./storybook/manager.js', './storybook/setup-preview.js']
+export const config: LsServerConfig = (environment) => {
+  if (environment === 'DISTRIBUTION')
+    return {
+      esbuildOptions: {
+        tsconfig: 'dist.tsconfig.json'
+      }
     }
-})
 
-export default config
+  return {};
+};
+
+export default config;

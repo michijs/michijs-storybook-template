@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "allowUnreachableCode": false,
+      "declaration": true,
+      "experimentalDecorators": true,
+      "noErrorTruncation": true,
+      "lib": [
+          "dom",
+          "es2021"
+      ],
+      "outDir": "dist",
+      "moduleResolution": "node",
+      "module": "es2020",
+      "target": "es2019",
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "noImplicitThis": true,
+      "jsx": "react",
+      "jsxFactory": "h.createElement",
+      "jsxFragmentFactory": "h.Fragment"
+  },
+  "exclude": ["src"],
+  "files": ["src/index.ts"]
+}

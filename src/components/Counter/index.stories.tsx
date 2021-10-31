@@ -1,5 +1,5 @@
 import { MyCounter } from './';
-import { bind } from '@lsegurado/storybook-config-ls-element/dist/bind';
+import { bind } from '../../storybook-utils/bind';
 import { h } from '@lsegurado/ls-element';
 
 export default {

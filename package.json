@@ -9,13 +9,11 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "storybook": "web-dev-server --config node_modules/@lsegurado/storybook-config-ls-element/server.config.mjs",
-    "build-storybook": "web-dev-server --config .storybook/server.config.mjs",
+    "storybook": "start-storybook -p 6006",
     "dist": "ls-server --dist",
+    "postinstall": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public",
-    "lint": "eslint --fix src/**/*{.ts,.tsx}",
-    "stylelint": "npx stylelint --fix **/*.css",
     "sandbox": "npm install && npm run storybook"
   },
   "keywords": [
@@ -23,16 +21,26 @@
   ],
   "devDependencies": {
     "@lsegurado/eslint-config-ls-element": "0.0.7",
-    "@lsegurado/ls-server": "^0.0.23",
-    "@lsegurado/storybook-config-ls-element": "0.0.4",
+    "@lsegurado/ls-server": "^0.0.24",
     "@lsegurado/stylelint-config-ls-element": "^0.0.2",
+    "@storybook/addon-a11y": "^6.3.12",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-storysource": "^6.3.12",
+    "@storybook/addons": "^6.3.12",
+    "@storybook/theming": "^6.3.12",
+    "@storybook/web-components": "^6.3.12",
+    "del-cli": "^4.0.1",
+    "esbuild-loader": "^2.16.0",
     "eslint": "^7.19.0",
     "lint-staged": "^10.5.4",
+    "lit-html": "^2.0.1",
     "stylelint": "^13.8.0",
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "^2.0.4"
+    "@lsegurado/ls-element": "^2.0.5"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"

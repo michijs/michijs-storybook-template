@@ -14,7 +14,7 @@
     "postinstall": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public",
-    "sandbox": "npm install && npm run storybook"
+    "sandbox": "npm run storybook"
   },
   "keywords": [
     "web-components"

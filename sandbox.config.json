@@ -3,7 +3,7 @@
   "hardReloadOnChange": true,
   "view": "browser",
   "template": "node",
-  "port": 8000,
+  "port": 6006,
   "disableLogging": true,
-  "container": { "port": 8000, "startScript": "sandbox", "node": "14" }
+  "container": { "port": 6006, "startScript": "sandbox", "node": "14" }
 }

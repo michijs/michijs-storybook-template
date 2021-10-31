@@ -9,7 +9,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "dist": "ls-server --dist",
     "postinstall": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",

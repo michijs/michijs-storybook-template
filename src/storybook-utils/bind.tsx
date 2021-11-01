@@ -5,9 +5,9 @@ export function bind(Story: JSX.Element) {
   const typedJSXElement = Story as ObjectJSXElement | FunctionJSXElement | FragmentJSXElement | ClassJSXElement
   const auxFunction = (attrs, { globals }) => {
     const { theme, backgrounds } = globals as {theme: 'dark' | 'light', backgrounds?: {
-      value: '#F8F8F8' | '#333333'
+      value: '#F8F8F8' | '#333333' | 'transparent'
     }};
-    const storyTheme = backgrounds?.value ? (backgrounds.value === '#333333' ? 'dark' : 'light'): undefined;
+    const storyTheme = backgrounds?.value && backgrounds?.value !== 'transparent' ? (backgrounds.value === '#333333' ? 'dark' : 'light'): undefined;
     const finalTheme = storyTheme ?? theme;
 
     typedJSXElement.attrs = { ...typedJSXElement.attrs, theme, ...attrs }

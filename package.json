@@ -11,7 +11,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "dist": "ls-server --dist",
-    "postinstall": "del-cli ./node_modules/@types/react",
+    "prepare": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public"
   },
@@ -21,8 +21,8 @@
     "ls-element"
   ],
   "devDependencies": {
-    "@lsegurado/eslint-config-ls-element": "0.0.7",
-    "@lsegurado/ls-server": "^0.0.24",
+    "@lsegurado/eslint-config-ls-element": "0.1.0",
+    "@lsegurado/ls-server": "^0.0.26",
     "@lsegurado/stylelint-config-ls-element": "^0.0.2",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
@@ -38,10 +38,10 @@
     "lint-staged": "^10.5.4",
     "lit-html": "^2.0.1",
     "stylelint": "^13.8.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "^2.0.5"
+    "@lsegurado/ls-element": "^2.1.6"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"

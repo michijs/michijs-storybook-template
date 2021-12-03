@@ -22,7 +22,7 @@
   ],
   "devDependencies": {
     "@lsegurado/eslint-config-ls-element": "0.1.0",
-    "@lsegurado/ls-server": "^0.0.26",
+    "@lsegurado/ls-server": "^0.0.27",
     "@lsegurado/stylelint-config-ls-element": "^0.0.2",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
@@ -41,7 +41,7 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "^2.1.6"
+    "@lsegurado/ls-element": "^2.1.7"
   },
   "eslintConfig": {
     "extends": "@lsegurado/eslint-config-ls-element"

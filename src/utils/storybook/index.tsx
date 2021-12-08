@@ -39,7 +39,6 @@ export function bind(Story: JSX.Element) {
     );
   };
   const templateBind = auxFunction.bind({});
-  const { children, ...attrsWithoutChildren } = typedJSXElement.attrs ?? {}
-  templateBind.args = { ...attrsWithoutChildren };
+  templateBind.args = typedJSXElement.attrs ?? {};
   return templateBind;
 }

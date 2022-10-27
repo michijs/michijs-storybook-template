@@ -1,6 +1,6 @@
-import { LsServerConfig } from '@lsegurado/ls-server';
+import { ServerConfig } from '@michijs/server';
 
-export const config: LsServerConfig = (environment) => {
+export const config: ServerConfig = (environment) => {
   if (environment === 'DISTRIBUTION')
     return {
       esbuildOptions: {

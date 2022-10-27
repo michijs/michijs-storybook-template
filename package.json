@@ -1,8 +1,8 @@
 {
-  "name": "@lsegurado/ls-element-storybook-template",
+  "name": "@michijs/michijs-storybook-template",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Storybook template for ls-element library",
+  "description": "Storybook template for MichiJS library",
   "files": [
     "dist/"
   ],
@@ -10,7 +10,7 @@
   "module": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "dist": "ls-server --dist",
+    "dist": "michi-server --dist",
     "prepare": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",
     "publish-npm": "npm run dist && npm publish --access public"
@@ -18,12 +18,12 @@
   "keywords": [
     "web-components",
     "storybook",
-    "ls-element"
+    "michijs"
   ],
   "devDependencies": {
-    "@lsegurado/eslint-config-ls-element": "0.1.0",
-    "@lsegurado/ls-server": "^0.0.29",
-    "@lsegurado/stylelint-config-ls-element": "^0.0.2",
+    "@michijs/eslint-config": "0.1.0",
+    "@michijs/server": "0.0.32",
+    "@michijs/stylelint-config": "^0.1.0",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
@@ -38,16 +38,16 @@
     "lint-staged": "^10.5.4",
     "lit-html": "^2.0.1",
     "stylelint": "^13.8.0",
-    "typescript": "^4.5.2"
+    "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@lsegurado/ls-element": "^2.1.9"
+    "@michijs/michijs": "1.0.0-rc-2"
   },
   "eslintConfig": {
-    "extends": "@lsegurado/eslint-config-ls-element"
+    "extends": "@michijs/eslint-config"
   },
   "stylelint": {
-    "extends": "@lsegurado/stylelint-config-ls-element"
+    "extends": "@michijs/stylelint-config"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

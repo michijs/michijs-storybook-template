@@ -1,6 +1,6 @@
 import { MyCounter } from './';
 import { bind } from '../../utils/storybook';
-import { h } from '@lsegurado/ls-element';
+import { h } from "@michijs/michijs";
 
 export default {
   title: 'Components/Counter',

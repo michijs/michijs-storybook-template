@@ -1,30 +1,30 @@
-import { AdoptedStyle, createCustomElement, EventDispatcher, h } from '@lsegurado/ls-element';
-import { style } from './index.css';
+import { createCustomElement, EventDispatcher, h } from "@michijs/michijs";
+import { style } from "./index.css";
 
-export const MyCounter = createCustomElement('simple-counter', {
+export const MyCounter = createCustomElement('my-counter', {
   reflectedAttributes: {
     count: 0
   },
   methods: {
-    decrementCount() { this.count--; },
-    incrementCount() { this.count++; },
+    decrementCount() { this.count-- },
+    incrementCount() { this.count++ },
   },
   events: {
     countChanged: new EventDispatcher<number>()
   },
+  adoptedStyleSheets: [style],
   observe: {
     count() {
-      this.countChanged(this.count);
+      this.countChanged(this.count)
     }
   },
   render() {
     return (
       <>
-        <AdoptedStyle id="style">{style}</AdoptedStyle>
         <button onpointerup={this.decrementCount}>-</button>
         <span>{this.count}</span>
         <button onpointerup={this.incrementCount}>+</button>
       </>
-    );
+    )
   }
-});
+})

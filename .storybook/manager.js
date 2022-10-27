@@ -8,7 +8,7 @@ addons.setConfig({
   theme: themes[storageTheme],
 });
 
-addons.register('@lsegurado/theme-listener', (api) => {
+addons.register('@michijs/theme-listener', (api) => {
   const channel = api.getChannel();
   channel.on(STORY_RENDERED, () => {
     const newStorageTheme = JSON.parse(localStorage.getItem('theme')) || 'light';

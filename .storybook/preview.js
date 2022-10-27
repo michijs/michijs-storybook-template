@@ -1,7 +1,8 @@
 import { html } from 'lit-html';
 import { themes } from '@storybook/theming';
 
-const storageTheme = JSON.parse(localStorage.getItem('theme')) || 'light';
+const storageValue = localStorage.getItem('theme');
+const storageTheme = storageValue ? JSON.parse(storageValue): 'light';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,6 +14,7 @@ export const parameters = {
 export const decorators = [(Story, context) => {
   const theme = context.globals.theme;
   localStorage.setItem('theme', JSON.stringify(theme));
+  console.log(Story)
   return html`${Story()}`;
 }];
 

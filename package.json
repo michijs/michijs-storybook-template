@@ -13,6 +13,7 @@
     "dist": "michi-server --dist",
     "prepare": "del-cli ./node_modules/@types/react",
     "publish-patch-version": "npm version patch && npm run publish-npm",
+    "lint": "rome check --apply-suggested .",
     "publish-npm": "npm run dist && npm publish --access public"
   },
   "keywords": [
@@ -21,9 +22,7 @@
     "michijs"
   ],
   "devDependencies": {
-    "@michijs/eslint-config": "0.1.0",
-    "@michijs/server": "0.0.32",
-    "@michijs/stylelint-config": "^0.1.0",
+    "@michijs/server": "0.0.34",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
@@ -34,26 +33,18 @@
     "@storybook/web-components": "^6.3.12",
     "del-cli": "^4.0.1",
     "esbuild-loader": "^2.16.0",
-    "eslint": "^7.19.0",
     "lint-staged": "^10.5.4",
     "lit-html": "^2.0.1",
-    "stylelint": "^13.8.0",
+    "rome": "^0.10.1-next",
     "typescript": "^4.8.4"
   },
   "dependencies": {
     "@michijs/michijs": "1.0.0-rc-2"
   },
-  "eslintConfig": {
-    "extends": "@michijs/eslint-config"
-  },
-  "stylelint": {
-    "extends": "@michijs/stylelint-config"
-  },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint --cache --fix",
-    "*.css": "stylelint --fix"
+    "*.{js,jsx,ts,tsx}": "rome check --apply-suggested"
   }
 }

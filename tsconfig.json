@@ -1,25 +1,38 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "allowUnreachableCode": false,
-        "declaration": true,
-        "experimentalDecorators": true,
-        "noErrorTruncation": true,
-        "lib": [
-            "dom",
-            "es2021"
-        ],
-        "outDir": "dist",
-        "moduleResolution": "node",
-        "module": "es2020",
-        "target": "es2019",
-        "noUnusedLocals": false,
-        "noUnusedParameters": false,
-        "noImplicitThis": true,
-        "jsx": "react",
-        "jsxFactory": "h.createElement",
-        "jsxFragmentFactory": "h.Fragment"
-    },
-    "include": ["src"]
+  "compilerOptions": {
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "noErrorTruncation": true,
+    "lib": [
+      "dom",
+      "ES2021"
+    ],
+    "incremental": true,
+    "outDir": "dist",
+    "moduleResolution": "node16",
+    "module": "esnext",
+    "target": "es2019",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitThis": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@michijs/michijs"
+  },
+  "include": [
+    ".storybook",
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
 }

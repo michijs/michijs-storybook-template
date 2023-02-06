@@ -1,5 +1,5 @@
 const path = require("path");
-// const { ESBuildPlugin } = require('esbuild-loader')
+const { ESBuildPlugin } = require('esbuild-loader')
 
 module.exports = {
   stories: [
@@ -22,7 +22,12 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
-  webpackFinal: (config, { configType }) => {
+  features: {
+    storyStoreV7: true,
+    emotionAlias: false,
+    postcss: false
+  },
+  webpackFinal: (config) => {
     const rules = [
       {
         test: /\.tsx?$/,
@@ -53,7 +58,7 @@ module.exports = {
       }
     ]
 
-    // config.plugins.push(new ESBuildPlugin());//ESBuild
+    config.plugins.push(new ESBuildPlugin());//ESBuild
 
     return { ...config, module: { ...config.module, rules } };
   },

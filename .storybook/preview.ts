@@ -1,4 +1,3 @@
-import { html } from 'lit-html';
 import { themes } from '@storybook/theming';
 
 const storageTheme = localStorage.getItem('theme') || 'light';
@@ -13,7 +12,7 @@ export const parameters = {
 export const decorators = [(Story, context) => {
   const theme = context.globals.theme;
   localStorage.setItem('theme', theme);
-  return html`${Story()}`;
+  return Story();
 }];
 
 export const globalTypes = {

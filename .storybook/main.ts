@@ -1,5 +1,5 @@
 const path = require("path");
-const { ESBuildPlugin } = require('esbuild-loader')
+const { EsbuildPlugin } = require('esbuild-loader')
 
 module.exports = {
   stories: [
@@ -58,7 +58,7 @@ module.exports = {
       }
     ]
 
-    config.plugins.push(new ESBuildPlugin());//ESBuild
+    config.plugins.push(new EsbuildPlugin());//ESBuild
 
     return { ...config, module: { ...config.module, rules } };
   },

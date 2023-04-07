@@ -1,2 +1,2 @@
-export { bind } from './bind'
-export { MichiComponentAnnotation } from './MichiComponentAnnotation'
+export { bind } from './bind';
+export type { MichiMeta } from './MichiMeta';

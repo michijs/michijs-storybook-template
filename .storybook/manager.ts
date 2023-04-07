@@ -10,13 +10,13 @@ addons.setConfig({
 
 addons.register('@lsegurado/theme-listener', (api) => {
   const channel = api.getChannel();
-  channel.on(STORY_RENDERED, () => {
+  channel?.on(STORY_RENDERED, () => {
     const newStorageTheme = localStorage.getItem('theme') || 'light';
     api.setOptions({
       theme: themes[newStorageTheme],
     });
   });
-  channel.on(DOCS_RENDERED, () => {
+  channel?.on(DOCS_RENDERED, () => {
     const newStorageTheme = localStorage.getItem('theme') || 'light';
     api.setOptions({
       theme: themes[newStorageTheme],

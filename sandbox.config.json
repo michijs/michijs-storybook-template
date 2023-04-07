@@ -5,5 +5,5 @@
   "template": "node",
   "port": 6006,
   "disableLogging": true,
-  "container": { "port": 6006, "startScript": "storybook", "node": "14" }
+  "container": { "port": 6006, "startScript": "storybook", "node": "16" }
 }

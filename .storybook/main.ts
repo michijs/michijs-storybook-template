@@ -19,9 +19,19 @@ const config: StorybookConfig = {
         },
       },
     },
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        sourceLoaderOptions: {
+          injectStoryParameters: false,
+        },
+      },
+    },
+    'storybook-dark-mode',
+    '@storybook/addon-viewport',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    '@storybook/addon-controls',
   ],
   features: {
     storyStoreV7: true,

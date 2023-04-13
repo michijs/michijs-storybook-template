@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "postinstall": "del-cli ./node_modules/@types/react",
+    "postinstall": "del-cli ./node_modules/@types/react || node --version",
     "storybook": "storybook dev -p 6006",
     "build": "storybook build",
     "dist": "michi-server --dist",

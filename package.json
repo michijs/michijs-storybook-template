@@ -27,7 +27,7 @@
   "devDependencies": {
     "@michijs/dev-server": "0.3.2",
     "@michijs/storybook-utils": "7.0.5",
-    "@storybook/addon-a11y": "7.0.5",
+    "@storybook/addon-a11y": "7.0.12",
     "@storybook/addon-viewport": "7.0.5",
     "@storybook/addon-controls": "7.0.5",
     "@storybook/addon-links": "7.0.5",

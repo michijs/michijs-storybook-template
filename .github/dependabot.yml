@@ -11,3 +11,4 @@ updates:
       interval: "weekly"
     ignore:
       - dependency-name: "@storybook/*"
+      - dependency-name: "storybook"

@@ -1,8 +1,8 @@
-import { MyCounter } from './';
-import { bind, Meta } from '@michijs/storybook-utils';
+import { MyCounter } from "./";
+import { bind, Meta } from "@michijs/storybook-utils";
 
 const meta = {
-  title: 'Components/Counter',
+  title: "Components/Counter",
 } satisfies Meta<typeof MyCounter>;
 export default meta;
 

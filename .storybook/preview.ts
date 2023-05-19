@@ -1,4 +1,4 @@
-import type { Preview } from '@michijs/storybook-utils';
+import type { Preview } from "@michijs/storybook-utils";
 
 const preview: Preview = {
   parameters: {

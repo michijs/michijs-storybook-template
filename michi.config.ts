@@ -1,12 +1,12 @@
-import { ServerConfigFactory } from '@michijs/dev-server';
+import { ServerConfigFactory } from "@michijs/dev-server";
 
 export const config: ServerConfigFactory = (environment) => {
-  if (environment === 'DISTRIBUTION')
+  if (environment === "DISTRIBUTION")
     return {
       esbuildOptions: {
-        tsconfig: 'dist.tsconfig.json'
-      }
-    }
+        tsconfig: "dist.tsconfig.json",
+      },
+    };
 
   return {};
 };

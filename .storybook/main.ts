@@ -1,14 +1,14 @@
-import type { StorybookConfig } from '@storybook/web-components-vite';
-import path from 'path';
+import type { StorybookConfig } from "@storybook/web-components-vite";
+import path from "path";
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     {
-      name: '@storybook/addon-storysource',
+      name: "@storybook/addon-storysource",
       options: {
         rule: {
-          include: [path.resolve(__dirname, '../src')],
+          include: [path.resolve(__dirname, "../src")],
         },
         loaderOptions: {
           injectStoryParameters: false,
@@ -20,28 +20,28 @@ const config: StorybookConfig = {
       },
     },
     {
-      name: '@storybook/addon-docs',
+      name: "@storybook/addon-docs",
       options: {
         sourceLoaderOptions: {
           injectStoryParameters: false,
         },
       },
     },
-    'storybook-dark-mode',
-    '@storybook/addon-viewport',
-    '@storybook/addon-a11y',
-    '@storybook/addon-links',
-    '@storybook/addon-controls',
+    "storybook-dark-mode",
+    "@storybook/addon-viewport",
+    "@storybook/addon-a11y",
+    "@storybook/addon-links",
+    "@storybook/addon-controls",
   ],
   features: {
     storyStoreV7: true,
   },
   framework: {
-    name: '@storybook/web-components-vite',
+    name: "@storybook/web-components-vite",
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: "tag",
   },
 };
 

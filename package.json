@@ -35,7 +35,7 @@
     "@storybook/builder-vite": "7.0.5",
     "@storybook/web-components-vite": "7.0.5",
     "@storybook/addon-docs": "7.0.5",
-    "del-cli": "5.0.0",
+    "del-cli": "5.0.1",
     "storybook": "7.0.5",
     "storybook-dark-mode": "3.0.0",
     "typescript": "5.0.4"

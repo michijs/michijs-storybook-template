@@ -25,7 +25,7 @@
     "web-components"
   ],
   "devDependencies": {
-    "@michijs/dev-server": "0.5.5",
+    "@michijs/dev-server": "0.5.7",
     "@michijs/storybook-utils": "7.0.5",
     "@storybook/addon-a11y": "7.0.5",
     "@storybook/addon-viewport": "7.0.5",

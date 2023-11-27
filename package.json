@@ -41,7 +41,7 @@
     "@storybook/addon-docs": "7.0.5",
     "del-cli": "5.1.0",
     "storybook": "7.0.5",
-    "storybook-dark-mode": "3.0.0",
+    "storybook-dark-mode": "3.0.3",
     "typescript": "5.0.4"
   },
   "peerDependencies": {

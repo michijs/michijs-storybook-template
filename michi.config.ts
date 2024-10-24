@@ -1,6 +1,6 @@
-import { ServerConfigFactory } from "@michijs/dev-server";
+import type { ServerConfigFactory } from "@michijs/dev-server";
 
-export const config: ServerConfigFactory = (environment) => {
+export const config: ServerConfigFactory = ({ environment }) => {
   if (environment === "DISTRIBUTION")
     return {
       esbuildOptions: {

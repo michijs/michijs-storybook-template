@@ -1,10 +1,14 @@
 import { MyCounter } from "./";
-import { bind, Meta } from "@michijs/storybook-utils";
+import { bind, type Meta } from "@michijs/storybook-utils";
 
-const meta = {
+export default {
   title: "Components/Counter",
+  argTypes: {
+    count: {
+      control: "number",
+    },
+  },
 } satisfies Meta<typeof MyCounter>;
-export default meta;
 
 export const Default = bind(
   <MyCounter

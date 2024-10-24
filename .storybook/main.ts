@@ -33,15 +33,44 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-controls",
   ],
-  features: {
-    storyStoreV7: true,
-  },
-  framework: {
-    name: "@storybook/web-components-vite",
-    options: {},
+  framework: "@storybook/web-components-vite",
+  core: {
+    builder: "@storybook/builder-vite",
+    disableTelemetry: true,
   },
   docs: {
     autodocs: "tag",
+  },
+  async viteFinal(config) {
+    // Merge custom configuration into the default config
+    const { mergeConfig } = await import("vite");
+
+    config.build?.rollupOptions;
+
+    return mergeConfig(config, {
+      server: {
+        watch: {
+          ignored: ["!**/node_modules/**"],
+        },
+        hmr: {
+          clientPort: process.env.CODESPACES ? 443 : undefined, // Fixes storybook reloading on codespaces
+        },
+      },
+      build: {
+        target: "esnext",
+        rollupOptions: {
+          preserveEntrySignatures: "strict",
+          output: {
+            format: "esm",
+            generatedCode: "es2015",
+          },
+        },
+      },
+      // Add dependencies to pre-optimization
+      optimizeDeps: {
+        exclude: ["@michijs/michijs"],
+      },
+    } satisfies typeof config);
   },
 };
 

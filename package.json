@@ -6,41 +6,45 @@
   "files": [
     "dist/"
   ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "postinstall": "bun exec \"rm -rf node_modules/@types/react\" || bun --version || npm --version",
+    "storybook": "bun exec \"rm -rf node_modules/.cache\" && storybook dev -p 6006",
+    "build": "storybook build",
+    "dist": "michi-server --dist",
+    "dist-w": "michi-server --dist --w",
+    "bun-link": "bun link --force",
+    "link": "bunx concurrently bun:dist-w bun:bun-link",
+    "test-tsc": "michi-server --test-tsc",
+    "test-tsc-w": "tsc --noEmit --skipLibCheck -w"
+  },
+  "devDependencies": {
+    "@michijs/tsconfig": "0.0.4",
+    "@michijs/dev-server": "0.7.16",
+    "@michijs/storybook-utils": "7.5.3-beta.10",
+    "@storybook/addon-a11y": "8.2.6",
+    "@storybook/addon-controls": "8.2.6",
+    "@storybook/addon-docs": "8.2.6",
+    "@storybook/addon-links": "8.2.6",
+    "@storybook/addon-storysource": "8.2.6",
+    "@storybook/addon-viewport": "8.2.6",
+    "@storybook/builder-vite": "8.2.6",
+    "@storybook/web-components-vite": "8.2.6",
+    "storybook": "8.2.6",
+    "storybook-dark-mode": "4.0.2",
+    "typescript": "5.6.2"
+  },
+  "packageManager": "bun@1.1.20",
+  "peerDependencies": {
+    "@mdi/js": "^7.4.47",
+    "@michijs/michijs": "^2.0.0-beta.105"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     }
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "scripts": {
-    "postinstall": "del-cli ./node_modules/@types/react || node --version",
-    "storybook": "storybook dev -p 6006",
-    "build": "storybook build",
-    "dist": "michi-server --dist",
-    "test-tsc": "tsc --noEmit --skipLibCheck"
-  },
-  "keywords": [
-    "web-components"
-  ],
-  "devDependencies": {
-    "@michijs/dev-server": "0.5.7",
-    "@michijs/storybook-utils": "7.0.5",
-    "@storybook/addon-a11y": "7.0.5",
-    "@storybook/addon-viewport": "7.0.5",
-    "@storybook/addon-controls": "7.0.5",
-    "@storybook/addon-links": "7.0.5",
-    "@storybook/addon-storysource": "7.0.5",
-    "@storybook/builder-vite": "7.0.5",
-    "@storybook/web-components-vite": "7.0.5",
-    "@storybook/addon-docs": "7.0.5",
-    "del-cli": "5.1.0",
-    "storybook": "7.0.5",
-    "storybook-dark-mode": "3.0.0",
-    "typescript": "5.0.4"
-  },
-  "peerDependencies": {
-    "@michijs/michijs": "1.1.7"
   }
 }

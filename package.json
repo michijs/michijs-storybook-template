@@ -39,7 +39,7 @@
   "packageManager": "bun@1.1.20",
   "peerDependencies": {
     "@mdi/js": "^7.4.47",
-    "@michijs/michijs": "2.0.0"
+    "@michijs/michijs": "2.0.1"
   },
   "exports": {
     ".": {

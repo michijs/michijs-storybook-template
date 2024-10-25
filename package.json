@@ -11,7 +11,7 @@
   "module": "dist/index.js",
   "scripts": {
     "postinstall": "bun exec \"rm -rf node_modules/@types/react\" || bun --version || npm --version",
-    "storybook": "bun exec \"rm -rf node_modules/.cache\" && storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "build": "storybook build",
     "dist": "michi-server --dist",
     "dist-w": "michi-server --dist --w",

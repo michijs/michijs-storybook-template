@@ -48,6 +48,7 @@ const config: StorybookConfig = {
     config.build?.rollupOptions;
 
     return mergeConfig(config, {
+      cacheDir: "node_modules/.vite",
       server: {
         watch: {
           ignored: ["!**/node_modules/**"],

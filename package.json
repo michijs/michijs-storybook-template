@@ -11,7 +11,7 @@
   "module": "dist/index.js",
   "scripts": {
     "postinstall": "bun exec \"rm -rf node_modules/@types/react\" || bun --version || npm --version",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "bun exec \"rm -rf node_modules/.cache node_modules/.vite\" || npm --version && storybook dev -p 6006",
     "build": "storybook build",
     "dist": "michi-server --dist",
     "dist-w": "michi-server --dist --w",
@@ -23,23 +23,23 @@
   "devDependencies": {
     "@michijs/tsconfig": "0.0.4",
     "@michijs/dev-server": "0.7.26",
-    "@michijs/storybook-utils": "7.6.0",
-    "@storybook/addon-a11y": "8.2.6",
-    "@storybook/addon-controls": "8.2.6",
-    "@storybook/addon-docs": "8.2.6",
-    "@storybook/addon-links": "8.2.6",
-    "@storybook/addon-storysource": "8.2.6",
-    "@storybook/addon-viewport": "8.2.6",
-    "@storybook/builder-vite": "8.2.6",
-    "@storybook/web-components-vite": "8.2.6",
-    "storybook": "8.2.6",
+    "@michijs/storybook-utils": "8.4.7",
+    "@storybook/addon-a11y": "8.4.7",
+    "@storybook/addon-controls": "8.4.7",
+    "@storybook/addon-docs": "8.4.7",
+    "@storybook/addon-links": "8.4.7",
+    "@storybook/addon-storysource": "8.4.7",
+    "@storybook/addon-viewport": "8.4.7",
+    "@storybook/builder-vite": "8.4.7",
+    "@storybook/web-components-vite": "8.4.7",
+    "storybook": "8.4.7",
     "storybook-dark-mode": "4.0.2",
     "typescript": "5.7.2"
   },
   "packageManager": "bun@1.1.20",
   "peerDependencies": {
     "@mdi/js": "^7.4.47",
-    "@michijs/michijs": "2.1.0"
+    "@michijs/michijs": "2.1.5"
   },
   "exports": {
     ".": {

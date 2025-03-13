@@ -45,8 +45,6 @@ const config: StorybookConfig = {
     // Merge custom configuration into the default config
     const { mergeConfig } = await import("vite");
 
-    config.build?.rollupOptions;
-
     return mergeConfig(config, {
       cacheDir: "node_modules/.vite",
       server: {

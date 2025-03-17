@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@michijs/tsconfig": "0.0.4",
-    "@michijs/dev-server": "0.8.4",
+    "@michijs/dev-server": "0.8.5",
     "@michijs/storybook-utils": "8.4.7",
     "@storybook/addon-a11y": "8.4.7",
     "@storybook/addon-controls": "8.4.7",

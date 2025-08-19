@@ -1,9 +1,22 @@
-name: "Lint"
+name: Lint
+on:
+  push:
+    branches-ignore:
+      - 'lint/**'
+      - 'michijs-dependabot*'
+      - 'dependabot*'
+      - 'production'
+  workflow_dispatch:
 
-on: [push, workflow_dispatch]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  call-workflow:
-    uses: michijs/.github/.github/workflows/lint.yml@main
-    name: "Run lint"
-    secrets: inherit
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint
+        uses: michijs/.github/.github/actions/lint@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

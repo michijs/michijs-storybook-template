@@ -1,24 +1,8 @@
 import type { StorybookConfig } from "@storybook/web-components-vite";
-import path from "path";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
-    {
-      name: "@storybook/addon-storysource",
-      options: {
-        rule: {
-          include: [path.resolve(__dirname, "../src")],
-        },
-        loaderOptions: {
-          injectStoryParameters: false,
-          prettierConfig: {
-            printWidth: 80,
-            singleQuote: false,
-          },
-        },
-      },
-    },
     {
       name: "@storybook/addon-docs",
       options: {
@@ -28,19 +12,17 @@ const config: StorybookConfig = {
       },
     },
     "storybook-dark-mode",
-    "@storybook/addon-viewport",
     "@storybook/addon-a11y",
     "@storybook/addon-links",
-    "@storybook/addon-controls",
   ],
+
   framework: "@storybook/web-components-vite",
+
   core: {
     builder: "@storybook/builder-vite",
     disableTelemetry: true,
   },
-  docs: {
-    autodocs: "tag",
-  },
+
   async viteFinal(config) {
     // Merge custom configuration into the default config
     const { mergeConfig } = await import("vite");
@@ -60,6 +42,7 @@ const config: StorybookConfig = {
         rollupOptions: {
           preserveEntrySignatures: "strict",
           output: {
+            dir: "build",
             format: "esm",
             generatedCode: "es2015",
           },
@@ -67,7 +50,7 @@ const config: StorybookConfig = {
       },
       // Add dependencies to pre-optimization
       optimizeDeps: {
-        exclude: ["@michijs/michijs"],
+        exclude: ["@michijs/michijs", "@ffmpeg/ffmpeg"],
       },
     } satisfies typeof config);
   },

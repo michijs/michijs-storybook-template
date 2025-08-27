@@ -42,7 +42,6 @@ const config: StorybookConfig = {
         rollupOptions: {
           preserveEntrySignatures: "strict",
           output: {
-            dir: "build",
             format: "esm",
             generatedCode: "es2015",
           },

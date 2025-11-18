@@ -1,12 +1,5 @@
 {
   "extends": "@michijs/tsconfig/tsconfig.json",
-  "include": [
-    ".storybook",
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build"
-  ]
+  "include": [".storybook", "src"],
+  "exclude": ["node_modules", "dist", "build"]
 }

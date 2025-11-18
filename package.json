@@ -21,9 +21,10 @@
     "test-tsc-w": "tsc --noEmit --skipLibCheck -w"
   },
   "devDependencies": {
-    "@michijs/tsconfig": "0.0.5",
     "@michijs/dev-server": "0.8.7",
+    "@michijs/shared-configs": "0.0.24",
     "@michijs/storybook-utils": "8.4.7",
+    "@michijs/tsconfig": "0.0.5",
     "@storybook/addon-a11y": "10.0.8",
     "@storybook/addon-controls": "9.0.8",
     "@storybook/addon-docs": "10.0.8",

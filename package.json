@@ -3,12 +3,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "description": "Storybook template for MichiJS library",
-  "files": [
-    "dist/"
-  ],
   "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "scripts": {
     "postinstall": "bun exec \"rm -rf node_modules/@types/react\" || bun --version || npm --version",
     "storybook": "bun exec \"rm -rf node_modules/.cache node_modules/.vite\" || npm --version && storybook dev -p 6006",

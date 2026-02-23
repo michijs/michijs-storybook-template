@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@michijs/dev-server": "0.8.18",
-    "@michijs/shared-configs": "0.0.36",
+    "@michijs/shared-configs": "0.0.35",
     "@michijs/storybook-utils": "8.4.8",
     "@michijs/tsconfig": "0.0.5",
     "@storybook/addon-a11y": "10.2.10",

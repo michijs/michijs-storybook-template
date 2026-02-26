@@ -11,7 +11,7 @@
     "dist": "michi-server --dist",
     "dist-w": "michi-server --dist --w",
     "bun-link": "bun link --force",
-    "link": "bunx concurrently bun:dist-w bun:bun-link",
+    "link": "bun run --parallel dist-w bun-link",
     "test-tsc": "michi-server --test-tsc",
     "test-tsc-w": "tsc --noEmit --skipLibCheck -w"
   },

@@ -28,7 +28,7 @@
     "@storybook/addon-viewport": "9.0.8",
     "@storybook/builder-vite": "10.5.0",
     "@storybook/web-components-vite": "10.5.0",
-    "storybook": "10.5.0",
+    "storybook": "10.6.2",
     "storybook-dark-mode": "5.0.0",
     "typescript": "7.0.2"
   },
